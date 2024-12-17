@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title%}HOME PAGE{%endblock%}
+{% block body%} 
+<h1>
+    WELCOME TO MY BLOG !   
+ </h1>
+
+ <p1>
+    WHO DARES WIN !
+ </p1>
+
+ <h3> LIST OF MY HOBBIES   </h3>
+    <ul>
+        {% for hobby in hobbies %}
+        <li>
+            {{hobby}}
+        </li>
+        {% endfor %}
+    </ul>
+    <img src="{{url_for('static',filename='images/game.png')}}"alt="game" />
+
+
+{% endblock%}
